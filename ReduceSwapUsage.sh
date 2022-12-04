@@ -9,7 +9,6 @@ if [ "$(swapon -s | wc -l)" == "1" ]; then
    echo "Swap is not enabled"
    exit 0
 fi
-
 # check if /proc/sys/vm/overcommit_memory is set to 1
 echo "Your current swap is used when there is only `cat /proc/sys/vm/swappiness`% of ram left" 
 echo "Reducing swap usage..."
